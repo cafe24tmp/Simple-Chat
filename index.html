@@ -6,9 +6,9 @@
         <script src="/socket.io/socket.io.js"></script>
         <script>
             var socket = io.connect();
-           
+
             $(document).ready(function(){
-				socket.on("chat", function(data){
+                socket.on("chat", function(data){
                     $("ul").prepend($("<li></li>").text(data));
                 });
                
