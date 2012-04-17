@@ -1,7 +1,10 @@
 var app = require("express").createServer(),
     io = require("socket.io").listen(app);
 
-var port = 80;
+var port = process.env.PORT;
+if (!port) {
+    port = 3000;
+}
 
 app.listen(port);
 
